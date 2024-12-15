@@ -1,4 +1,4 @@
-<H1>Method 1</H1>
+#Method 1
 
 class Solution {
     public int removeDuplicates(int[] nums) {
@@ -15,7 +15,7 @@ class Solution {
 }
 
 ----------------------------------
-<H1>Method 2</H1>
+#Method 2
 
 class Solution {
     public int removeDuplicates(int[] nums) {
