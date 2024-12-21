@@ -7,19 +7,20 @@ class Solution {
             if(c =='(' || c == '{' || c == '['){
                 stack.push(c);
             }
-            else if(stack.isEmpty()){
-                return false;
-            }
-
-            if(c ==')' && stack.peek() == '('||
-            c == '}' && stack.peek() == '{'||
-            c == ']'&& stack.peek() == '['){
-                stack.pop();
+            else{
+                if(stack.isEmpty()){
+                    return false;
+                }
+                if(c ==')' && stack.peek() == '('||
+                c == '}' && stack.peek() == '{'||
+                c == ']'&& stack.peek() == '['){
+                    stack.pop();
+                }
+                else{
+                    return false;
+                }
             }
         }
-        if(!stack.isEmpty()){
-            return false;
-        }
-        return true;
+        return stack.isEmpty();
     }
 }
